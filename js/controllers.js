@@ -1,10 +1,20 @@
-myApp.controller('HomeController', ['$scope', function($scope) {
+myApp.controller('InfoController', [function() {
   var vm = this;
 
 }]);
 
-myApp.controller('IndexController', ['$scope', function($scope) {
+myApp.controller('RigController', ['itemService', function(itemService) {
   var vm = this;
-  vm.header = "Index";
+  vm.itemService = itemService;
+
+}]);
+
+myApp.controller('ArenaController', [function() {
+  var vm = this;
+
+}]);
+
+myApp.controller('IndexController', [function() {
+  var vm = this;
 
 }]);

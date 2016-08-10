@@ -26,15 +26,55 @@
     <script src="./js/factories.js" charset="utf-8"></script>
     <script src="./js/filters.js" charset="utf-8"></script>
     <script src="./js/services.js" charset="utf-8"></script>
+
+    <link rel="stylesheet" href="/css/style.min.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="/css/normalStyles.css" media="screen" title="no title" charset="utf-8">
   </head>
   <body ng-controller="IndexController as IC">
-    <div class="container">
-      <h2>This is an Angular Template</h2>
-      <h3>{{IC.header}}</h3>
+    <div class="container-fluid">
+      <a href="#/">
+        <div class="row titleBar">
+          <div class="col-xs-4">
+
+          </div>
+          <div class="col-xs-4 alignCenter">
+            <div class="titleWrapper">
+              <h1>ROBOT RIGGER</h1>
+            </div>
+          </div>
+        </div>
+      </a>
+      <div class="row mainNav">
+        <div class="col-xs-6">
+          <a href="#/rigger">
+            <button class="btn-primary btn-lg navBtn" type="button" name="riggerBTN">Robot Rigger</button>
+          </a>
+        </div>
+        <div class="col-xs-6">
+          <a href="#/arena">
+            <button class="btn-success btn-lg navBtn" type="button" name="arenaBTN">Robot Arena</button>
+          </a>
+        </div>
+      </div>
+
+    <div class="row viewContainer">
+      <div class="col-md-12">
+        <ng-view></ng-view>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 spacer">
+
+      </div>
+    </div>
+
+
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
   </body>
 </html>

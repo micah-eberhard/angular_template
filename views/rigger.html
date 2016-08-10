@@ -1,0 +1,58 @@
+<div class="row">
+  <div class="col-sm-6">
+    <div class="row itemWrapper" ng-repeat="item in RC.itemService.items">
+      <div class="col-sm-12">
+        <div class="row">
+          <div class="col-sm-6">
+            <img class="itemImg" ng-src="{{item.img_url}}" alt="" />
+          </div>
+          <div class="col-sm-4">
+            <div class="row">
+              <div class="col-sm-12">
+                <h3>{{item.name}}</h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-8">
+                <p>
+                  Power: {{item.power}}
+                </p>
+                <p>
+                  Cost: {{item.cost}}
+                </p>
+              </div>
+              <div class="col-sm-2" ng-init="qty = 1">
+                <input class="itemQty" type="number" name="qty" value="" placeholder="qty" ng-model="qty">
+              </div>
+              <div class="col-sm-2">
+                <button type="button" class="btn-sm btn-success addBtn">
+                  Add
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <ul>
+      <li>
+        Add an input to add a name to your robot.
+      </li>
+      <li>
+        Add an input to add an image to your robot.
+      </li>
+      <li>
+        Show added items and their quantities.
+      </li>
+      <li>
+        Add up the stats of all items that have been added to your robot, and display total cost, total power etc.
+      </li>
+      <li>
+        Add a button which will trigger a post request sending all your robot's info to the server once complete.
+      </li>
+    </ul>
+  </div>
+</div>
